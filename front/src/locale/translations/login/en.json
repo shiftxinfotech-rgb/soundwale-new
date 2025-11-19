@@ -1,0 +1,19 @@
+{
+  "validation": {
+    "phoneNumber": {
+      "required": "Mobile number is required",
+      "invalid": "Invalid mobile number for {{countryName}}"
+    },
+    "email": {
+      "required": "Email address is required"
+    }
+  },
+  "phoneNumber": "Mobile Number",
+  "phoneNumberPlaceholder": "Enter mobile no.",
+  "email": "Email address",
+  "emailPlaceholder": "Enter email address",
+  "submitBtn": "Send OTP via WhatsApp",
+  "submitBtnEmail": "Send OTP",
+  "missSound": "Login Here",
+  "tuneToLogin": "Welcome back you've\nbeen missed!"
+}

@@ -1,0 +1,23 @@
+{
+  "editProfile": "Edit Profile",
+  "addMember": "Add Member",
+  "next": "NEXT",
+  "addMore": "+ Add More",
+  "save": "SAVE",
+  "selectProduct": "Select Product",
+  "profile": "Profile",
+  "personalDetails": "Personal Details",
+  "businessName": "Business Name",
+  "infoMissing": "Info Missing",
+  "soundCompanyName": "Sound Company Name",
+  "shopPhoto": "Shop Photo",
+  "notUploaded": "Not Uploaded",
+  "addCompanies": "Add companies you deal with",
+  "product": "Product",
+  "subProduct": "Sub Product",
+  "workingWith": "Working With",
+  "selectSubProduct": "Select Sub Product",
+  "enterNewSubProduct": "Enter New Sub Product",
+  "addInfo": "Add Info",
+  "addPartInfo": "Add Part Info"
+}

@@ -1,0 +1,45 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "ES6",
+    "module": "ESNext",
+    "allowJs": true,
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": false,
+    // "jsx": "react-native",
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "noEmitOnError": true,
+    "skipLibCheck": true,
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "baseUrl": ".",
+    "paths": {
+      "@assets": ["./src/assets/index.tsx"],
+      "@components": ["./src/components/index.tsx"],
+      "@core": ["./src/core/index.tsx"],
+      "@features": ["./src/features/index.tsx"],
+      "@hooks": ["src/hooks/index.tsx"],
+      "@providers": ["./src/providers/index.tsx"],
+      "@navigator": ["./src/navigators/index.tsx"],
+      "@screens": ["./src/screens/index.tsx"],
+      "@services": ["./src/services/index.tsx"],
+      "@theme": ["./src/theme/index.tsx"],
+      "@util": ["./src/util/index.tsx"],
+      "@data": ["src/data/index.tsx"],
+      "@mock-data": ["./src/mock-data/index.tsx"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/node_modules/*"
+  ]
+}

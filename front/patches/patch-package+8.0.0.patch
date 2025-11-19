@@ -1,0 +1,16 @@
+diff --git a/node_modules/patch-package/dist/makePatch.js b/node_modules/patch-package/dist/makePatch.js
+index d8d0925..5998bff 100644
+--- a/node_modules/patch-package/dist/makePatch.js
++++ b/node_modules/patch-package/dist/makePatch.js
+@@ -120,9 +120,10 @@ function makePatch({ packagePathSpecifier, appPath, packageManager, includePaths
+             try {
+                 // try first without ignoring scripts in case they are required
+                 // this works in 99.99% of cases
+-                spawnSafe_1.spawnSafeSync(`yarn`, ["install", "--ignore-engines"], {
++                spawnSafe_1.spawnSafeSync(`yarn`, ["install"], {
+                     cwd: tmpRepoNpmRoot,
+                     logStdErrOnError: false,
++                    stdio: "inherit",
+                 });
+             }
+             catch (e) {

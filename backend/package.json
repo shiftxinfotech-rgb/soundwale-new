@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "axios": "^1.1.2",
+    "laravel-mix": "^6.0.49",
+    "laravel-vite-plugin": "^0.7.2",
+    "lodash": "^4.17.19",
+    "postcss": "^8.1.14",
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "bootstrap-datepicker": "^1.8.0",
+    "chart.js": "^4.4.3",
+    "ckeditor4": "^4.20.1",
+    "datatables.net": "^1.10.19",
+    "datatables.net-autofill": "^2.5.1",
+    "datatables.net-bs4": "^1.13.1",
+    "datatables.net-buttons": "^2.3.3",
+    "datatables.net-responsive": "^2.4.0",
+    "intl-tel-input": "^17.0.19",
+    "jquery": "^3.6.3",
+    "jquery-validation": "^1.20.0",
+    "js-cookie": "^3.0.1",
+    "moment": "^2.29.4",
+    "perfect-scrollbar": "^1.5.5",
+    "popper.js": "^1.15.0",
+    "sticky-js": "^1.3.0",
+    "sweetalert2": "^8.8.1",
+    "tooltip-js": "^3.0.0",
+    "webfontloader": "^1.6.16",
+    "wow.js": "^1.2.2",
+    "wowjs": "^1.1.3"
+  }
+}

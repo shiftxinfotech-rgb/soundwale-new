@@ -1,0 +1,145 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Helper\Helper;
+use App\Http\Controllers\Controller;
+use App\Models\Testimonials;
+use DataTables;
+use Illuminate\Http\Request;
+
+class TestimonialsControllers extends Controller
+{
+    public function list(Request $request)
+    {
+        if ($request->method() == 'POST' && $request->ajax()) {
+            $query = Testimonials::select('id', 'name', 'rating', 'designation', 'image', 'type', 'status');
+
+            if (! $request->has('order')) {
+                $query->orderBy('id', 'desc');
+            }
+
+            if ($request->has('status')) {
+                $status = $request->get('status');
+                if ($status == 'deleted') {
+                    $query->deleted();
+                }
+            }
+
+            if ($request->has('type') && $request->get('type') !== '') {
+                $query->where('type', $request->get('type'));
+            }
+
+            return DataTables::of($query)
+                ->addColumn('type', function ($row) {
+                    return $row->type == 0 ? "<span style='width: 112px;'><span class='kt-badge kt-badge--success kt-badge--dot'></span>&nbsp;<span class='kt-font-bold kt-font-success'>Clients</span></span>" : "<span style='width: 112px;'><span class='kt-badge kt-badge--primary kt-badge--dot'></span>&nbsp;<span class='kt-font-bold kt-font-primary'>Candidates</span></span>";
+                })
+                ->addColumn('action', function ($row) {
+                    $viewRoute = "<a href='".route('admin.testimonials.view', $row->id)."' class='btn btn-sm btn-clean btn-icon'  title='View details'><i class='flaticon-eye fa-lg'></i></a>";
+                    $editRoute = "<a href='".route('admin.testimonials.edit', $row->id)."' class='btn btn-sm btn-clean btn-icon' title='Edit details'><i class='flaticon2-pen'></i></a>";
+                    $deleteRoute = "<a href='".route('admin.testimonials.delete')."' data-id='".$row->id."' data-title='Delete Testimonials?' data-text='Are you sure you want to delete Testimonials?' class='btn btn-sm btn-clean btn-icon delete-record' title='Delete'><i class='flaticon2-trash'></i></a>";
+
+                    return "{$editRoute}{$viewRoute}{$deleteRoute}";
+                })
+
+                ->rawColumns(['action','type'])
+                ->make(true);
+        }
+
+        return view('admin.testimonials.list');
+    }
+
+
+    public function add($id = null)
+    {
+        $data = null;
+        if ($id) {
+            $data = Testimonials::select('id', 'image', 'name', 'rating', 'designation', 'image', 'message','type','status')->findOrFail($id);
+        }
+
+        return view('admin.testimonials.add', compact('data'));
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            // 'title' => "required|string|max:150|unique:testimonials,title,{$request->edit_id}",
+            // 'image' => 'required_without:edit_id|max:2048|'.Helper::mimesFileValidation('image'),
+            // 'video_link' => "required",
+
+        ], [
+            // 'image.max' => 'The image field must not be greater than 2MB.',
+        ]);
+
+        try {
+            $validate = $request->only('name', 'rating', 'designation', 'message','type','status');
+
+            if ($request->hasFile('image')) {
+                $validate['image'] = Helper::uploadImage($request->image, Testimonials::IMAGE_PATH);
+            }
+
+            $validate['status'] = $request->has('status') ? $request->get('status') : 1;
+            $obj = ($request->edit_id) ? Testimonials::where('id', $request->edit_id)->first() : new Testimonials;
+            $obj->fill($validate);
+            $obj->save();
+
+            return response()->json(['message' => ($request->edit_id) ? 'Testimonials update successfully' : 'Testimonials added successfully'], 200);
+        } catch (\Throwable $th) {
+            logger($th->getMessage());
+
+            return response()->json(['message' => 'Oops! something went wrong, Please try again later'], 500);
+        }
+    }
+
+    public function view($id)
+    {
+        $data = Testimonials::findOrFail($id);
+
+        return view('admin.testimonials.view', compact('data'));
+    }
+
+    public function statusChange(Request $request)
+    {
+        if (! $request->ajax()) {
+            return abort(404);
+        }
+
+        $request->validate([
+            'id' => 'required|exists:testimonials,id',
+            'status' => 'required',
+        ]);
+
+        try {
+            $obj = Testimonials::where('id', request('id'))->limit(1)->first();
+            if ($obj) {
+                $obj->status = ($request->status == 'true') ? 1 : 0;
+                $obj->save();
+            }
+
+            return response()->json(['message' => 'Status update successfully'], 200);
+        } catch (\Throwable $th) {
+            logger($th->getMessage());
+
+            return response()->json(['message' => 'Oops! something went wrong, Please try again later'], 500);
+        }
+    }
+
+    public function delete(Request $request)
+    {
+        if (! $request->ajax()) {
+            return abort(404);
+        }
+        try {
+            $obj = Testimonials::where('id', request('id'))->limit(1)->first();
+            if ($obj) {
+                $delete = $obj->delete();
+            }
+
+            return response()->json(['message' => 'Testimonials Deleted successfully'], 200);
+        } catch (\Throwable $th) {
+            logger($th->getMessage());
+
+            return response()->json(['message' => 'Oops! something went wrong, Please try again later'], 500);
+        }
+    }
+}

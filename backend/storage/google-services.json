@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "768432986925",
+    "project_id": "soundwale-ea05d",
+    "storage_bucket": "soundwale-ea05d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768432986925:android:67affccded23a8d484d1a4",
+        "android_client_info": {
+          "package_name": "com.soundwale"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPSAb44IyX1qeZWxQuaHyBqc_ZlkN3wdo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,248 @@
+{
+  "validation": {
+    "name": {
+      "required": "Name is required.",
+      "minLength": "Name must be at least 2 characters long."
+    },
+    "email": {
+      "invalid": "Invalid email format.",
+      "required": "Email Id is required.",
+      "enterValid": "Enter a valid email id"
+    },
+    "whatsapp": {
+      "required": "WhatsApp number is required.",
+      "invalid": "Invalid WhatsApp number for {{countryName}}",
+      "minLength": "Invalid WhatsApp number"
+    },
+    "visitingCard": {
+      "required": "Please upload your visiting card image."
+    },
+    "city": {
+      "required": "City is required."
+    },
+    "villageOrCity": {
+      "required": "Village/Area is required."
+    },
+    "location": {
+      "required": "Location is required."
+    },
+    "facebook": {
+      "invalid": "Enter a valid Facebook URL."
+    },
+    "instagram": {
+      "invalid": "Enter a valid Instagram URL."
+    },
+    "website": {
+      "invalid": "Enter a valid website URL."
+    },
+    "youtube": {
+      "invalid": "Enter a valid YouTube URL."
+    },
+    "serviceCenter": {
+      "required": "Please select a service center."
+    },
+    "description": {
+      "required": "Description is required.",
+      "minLength": "Description must be at least 10 characters long."
+    },
+    "mobile": {
+      "required": "Mobile number is required.",
+      "minLength": "Invalid mobile number",
+      "invalid": "Invalid mobile number for {{countryName}}"
+    },
+    "state": {
+      "required": "State is required."
+    },
+    "country": {
+      "required": "Country is required."
+    },
+    "village": {
+      "required": "Village/Area is required."
+    },
+    "countryCode": {
+      "required": "Country code is required when mobile number is provided"
+    },
+    "company": {
+      "required": "Company is required."
+    },
+    "gst": {
+      "invalid": "Invalid GST number"
+    },
+    "role": {
+      "required": "Role is required."
+    },
+    "common": {
+      "required": "{{label}} is required.",
+      "minLength": "{{label}} must be at least {{length}} characters long.",
+      "alreadyExists": "{{label}} already exists."
+    }
+  },
+  "forms": {
+    "businessType": {
+      "label": "Business Type",
+      "placeholder": "Select Business Type"
+    },
+    "email": {
+      "label": "Email Id",
+      "placeholder": "Enter Email Id"
+    },
+    "mobile": {
+      "label": "Mobile Number",
+      "placeholder": "Enter Mobile Number"
+    },
+    "name": {
+      "label": "Name",
+      "placeholder": "Enter Name"
+    },
+    "visitingCard": {
+      "label": "Visiting Card",
+      "placeholder": "Upload Image"
+    },
+    "serviceCenter": {
+      "label": "Service Center",
+      "placeholder": "Enter Service Center"
+    },
+    "company": {
+      "label": "Company",
+      "placeholder": "Select Company",
+      "enterNew": "Enter Company"
+    },
+    "location": {
+      "label": "Location",
+      "placeholder": "Select Location"
+    },
+    "city": {
+      "label": "City",
+      "placeholder": "Select City"
+    },
+    "state": {
+      "label": "State",
+      "placeholder": "Select State"
+    },
+    "country": {
+      "label": "Country",
+      "placeholder": "Select Country"
+    },
+    "village": {
+      "label": "Village Or Area",
+      "placeholder": "Enter Village/Area"
+    },
+    "facebook": {
+      "label": "Facebook",
+      "placeholder": "Enter Facebook URL"
+    },
+    "instagram": {
+      "label": "Instagram",
+      "placeholder": "Enter Instagram URL"
+    },
+    "website": {
+      "label": "Website",
+      "placeholder": "Enter Website URL"
+    },
+    "youtube": {
+      "label": "Youtube",
+      "placeholder": "Enter Youtube URL"
+    },
+    "gst": {
+      "label": "GST",
+      "placeholder": "Enter GST"
+    },
+    "aboutUs": {
+      "label": "About us",
+      "placeholder": "Enter About us"
+    },
+    "parts": {
+      "placeholder": "Select Part",
+      "label": "Part Name"
+    },
+    "partDetails": {
+      "label": "Details",
+      "placeholder": "Enter Details"
+    },
+    "dealer": {
+      "label": "Business Name",
+      "placeholder": "Enter Business Name"
+    },
+    "service_center": {
+      "label": "Your Shop Name",
+      "placeholder": "Enter Your Shop Name"
+    },
+    "manufacturer": {
+      "label": "Company Name",
+      "placeholder": "Enter Company Name",
+      "mdName": "Managing Director Name",
+      "mdNamePlaceholder": "Enter Managing Director Name",
+      "mdNumber": "Managing Director Number",
+      "mdNumberPlaceholder": "Enter Managing Director Number",
+      "marketingName": "Marketing Person Name",
+      "marketingNamePlaceholder": "Enter Marketing Person Name",
+      "marketingNumber": "Marketing Person Number",
+      "marketingNumberPlaceholder": "Enter Marketing Person Number",
+      "marketingEmail": "Marketing Person Email",
+      "marketingEmailPlaceholder": "Enter Marketing Person Email"
+    },
+    "repairing_shop": {
+      "label": "Service Center Name",
+      "placeholder": "Enter Service Center Name"
+    },
+    "sound_education": {
+      "label": "Sound Academy Name",
+      "placeholder": "Enter Sound Academy name"
+    },
+    "sound_provider": {
+      "label": "Your Sound Name",
+      "placeholder": "Enter Sound Name"
+    },
+    "dj_operator": {
+      "label": "Business / Nick Name",
+      "placeholder": "Enter Business / Nick Name"
+    },
+    "sound_operator": {
+      "label": "Business / Nick Name",
+      "placeholder": "Enter Business / Nick Name"
+    },
+    "common": {
+      "label": "Name",
+      "placeholder": "Enter Name"
+    },
+    "whatManufacturer": {
+      "label": "What Manufacturer you are doing?",
+      "placeholder": "Select",
+      "enterNew": "Enter New",
+      "enterNewProduct": "Enter New Product"
+    },
+    "spare_part": {
+      "label": "Personal Name",
+      "placeholder": "Enter Personal Name",
+      "yourShopName": "Your Shop Name",
+      "yourShopNamePlaceholder": "Enter Your Shop Name"
+    },
+    "business": {
+      "label": "Business Name",
+      "placeholder": "Enter Business Name"
+    },
+    "genderOptions": [
+      {
+        "label": "Male",
+        "value": "male",
+        "id": "male"
+      },
+      {
+        "label": "Female",
+        "value": "female",
+        "id": "female"
+      }
+    ],
+    "fieldType": {
+      "owner": "MD Detail",
+      "marketing": "Marketing Detail",
+      "other": "Other Detail"
+    }
+  },
+  "addMember": "Add Member",
+  "next": "NEXT",
+  "gender": "Gender",
+  "addMore": "+ Add More",
+  "submit": "SUBMIT",
+  "productName":"Product Name"
+}

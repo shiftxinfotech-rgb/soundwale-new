@@ -1,0 +1,207 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-color: #0072cd;
+}
+
+
+/* Global stylings */
+
+.submit_role_main label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.submit_role_main input {
+    /* display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem; */
+
+}
+
+.submit_role_main .ml-auto {
+    margin-left: auto;
+}
+
+
+
+.submit_role_main .input-group {
+    margin: 0.5rem 0;
+}
+
+.submit_role_main .form-step {
+    display: none;
+}
+
+.submit_role_main .form-step.active {
+    display: block;
+    transform-origin: top;
+    animation: animate .5s;
+}
+
+
+/* Button */
+.submit_role_main .btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit_role_main .btn {
+    /* padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    width: min-content;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s; */
+    cursor: pointer;
+}
+
+.submit_role_main .btn-next {
+    /* background-color: var(--blue-color);
+    color: white; */
+    float: right;
+}
+
+.submit_role_main .btn-prev {
+    background-color: #777;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.submit_role_main .btn:hover {
+    /* box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--blue-color); */
+}
+
+
+
+/* Prefixes */
+
+.submit_role_main .input-box {
+    display: flex;
+    align-items: center;
+    /* max-width: 300px; */
+    background: #fff;
+    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+    padding-left: 0.5rem;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.submit_role_main .input-box .prefix {
+    font-weight: 300;
+    font-size: 14px;
+    color: rgb(117, 114, 114);
+}
+
+.submit_role_main .input-box input {
+    border: none;
+    outline: none;
+}
+
+.submit_role_main .input-box:focus-within {
+    border-color: #777;
+}
+
+/* End Prefixes */
+
+
+/* Progress bar */
+
+.progress-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin-bottom: 30px;
+    flex-direction: row;
+    z-index: 1;
+    overflow: initial;
+}
+
+.progress-bar::before,
+.progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #ededed;
+    z-index: -1;
+}
+
+.progress {
+    background-color: var(--blue-color);
+    width: 0;
+    transition: .5s;
+}
+
+.progress-step {
+    width: 40px;
+    height: 40px;
+    background-color: #ededed;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+}
+
+.progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.40rem);
+    font-size: 14px;
+    color: black !important;
+    font-weight: 500;
+}
+
+.progress-step.active {
+    background-color: var(--blue-color);
+    color: white;
+}
+
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+/* End Progress bar */
+
+/* Add Experience Btn */
+
+
+.add-exp-btn {
+    color: #577d4c;
+    border-right: 2px solid #577d4c;
+    border-bottom: 2px solid #577d4c;
+    padding: 0 10px 10px 0;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+}
+
+.add-experience {
+    margin-bottom: 20px;
+    display: none;
+}

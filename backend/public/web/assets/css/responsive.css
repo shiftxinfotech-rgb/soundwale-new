@@ -1,0 +1,563 @@
+/* Responsive Css */
+
+
+@media only screen and (max-width: 1799px) {
+    .dueal-section.alternat-3 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1499px) {}
+
+
+@media only screen and (max-width: 1399px) {}
+
+
+@media only screen and (max-width: 1299px) {}
+
+
+
+@media only screen and (max-width: 1200px) {
+
+
+
+    .menu-area .mobile-nav-toggler {
+        display: none;
+        padding: 10px;
+    }
+
+    .megamenu ul li:first-child {
+        display: none;
+    }
+
+    .dueal-section .testimonial-content,
+    .dueal-section.alternat-3 .content_block_three .content-box {
+        margin: 0px;
+    }
+
+    .dueal-section .image-layer-1,
+    .dueal-section .image-layer-2 {
+        display: none;
+    }
+
+    .dueal-section.service-page {
+        padding-bottom: 120px;
+        overflow: hidden;
+    }
+    /* ----------------------------- home_css_start ----------------------------- */
+    .main-header .outer-container {
+        padding: 0px 15px;
+    }
+    .main-menu .navigation>li {
+        margin: 0px 15px;
+    }
+    .banner_main {
+        padding: 110px 0px;
+    }
+    .banner_data h1 {
+        font-size: 45px;
+        margin-bottom: 5px;
+    }
+    .specialist_sec {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .sec-title.pb_40 {
+        padding-bottom: 30px;
+    }
+    .industries-block-two .inner-box .icon-box {
+        top: 20px;
+    }
+    .industries-block-two .inner-box .icon-box img {
+        width: 60px;
+        height: 60px;
+    }
+    .positions_main {
+        padding: 40px 0px 30px;
+    }
+    .jobs_seeker_btn {
+        margin-top: 0;
+    }
+    .testimonial_main {
+        padding: 40px 0px 20px;
+        margin-bottom: 40px;
+    }
+    .sec-title h2 {
+        font-size: 40px;
+    }
+    .testimonial-block-one {
+        max-width: 100%;
+    }
+    .testimonial-block-one .inner-box .shape {
+        display: none;
+    }
+    .download-section .inner-container {
+        padding: 30px;
+    }
+    .recent_job_sec {
+        padding: 40px 0px 10px;
+    }
+    .footer_time_info {
+        margin-top: 10px;
+    }
+    .main-footer .widget-title {
+        margin-bottom: 15px;
+    }
+    .main-footer .links-widget .links-list li {
+        margin-bottom: 13px;
+    }
+    .main-footer .links-widget .links-list li a {
+        line-height: normal;
+    }
+
+    /* ----------------------------- home_css_end ----------------------------- */
+
+    /* ----------------------------- about_css_start ---------------------------- */
+    .team-section {
+        margin-top: 40px;
+    }
+    .sec-title.pb_60 {
+        padding-bottom: 40px;
+    }
+    .work_with_main {
+        margin-top: 20px;
+    }
+    /* ----------------------------- about_css_end ---------------------------- */
+
+    /* ------------------------- hiring_talent_css_start ------------------------ */
+    .testimonial_main_talent {
+        margin-top: 20px;
+    }
+    .recent_job_sec .chooseus-block-one .inner-box {
+        padding-bottom: 0px;
+    }
+    .submit_role_main {
+        padding: 20px 0px 10px;
+    }
+    /* ------------------------- hiring_talent_css_end ------------------------ */
+
+    /* --------------------------- apply_job_css_start -------------------------- */
+    .appy_dtl {
+        margin-top: 30px;
+    }
+    .progress_bar_main {
+        width: 90%;
+    }
+    /* --------------------------- apply_job_css_end -------------------------- */
+
+    /* ---------------------------- contact_css_start --------------------------- */
+    .contact-section.contact_new_ctm .form-inner {
+        padding: 30px 30px 30px 10px;
+    }
+    .contact-section.contact_new_ctm .info-box {
+        padding: 20px 20px 20px 20px;
+    }
+    .contact-section .info-box .single-item .icon-box {
+        top: 0;
+    }
+    .contact_new_ctm {
+        padding-bottom: 40px;
+    }
+
+    /* ---------------------------- contact_css_end --------------------------- */
+
+}
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+    .main-menu .navigation>li>ul,
+    .main-menu .navigation>li>ul>li>ul,
+    .main-menu .navigation>li>.megamenu {
+        display: block !important;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .main-menu,
+    .sticky-header,
+    .main-header.style-one .outer-container:before {
+        display: none !important;
+    }
+    .menu-area .mobile-nav-toggler {
+        display: block;
+        padding: 10px;
+    }
+
+    .dueal-section.alternat-3 .content_block_three .content-box {
+        margin-bottom: 30px;
+    }
+
+    .dueal-section.alternat-3 .content_block_three .content-box .sec-title h2 {
+        color: #fff;
+    }
+
+    .dueal-section.service-page .bg-color {
+        width: 100%;
+    }
+
+    .dueal-section .hiring-content {
+        margin: 0px 0px 30px 0px;
+    }
+
+    .dueal-section.service-page {
+        padding-bottom: 90px;
+    }
+
+    .dueal-section .hiring-content h2,
+    .dueal-section .hiring-content p {
+        color: #fff;
+    }
+
+    .dueal-section .bg-color {
+        width: 100%;
+    }
+    /* ----------------------------- home_css_start ----------------------------- */
+    .main-menu .navigation .no_web_view {
+        display: inline-block;
+    }
+    .main-header .menu-right-content {
+        display: none;
+    }
+    .mobile-menu .menu-box {
+        background-color: #FFF;
+    }
+    .mobile-menu .navigation li>a,
+    .mobile-menu .contact-info h4,
+    .mobile-menu .close-btn {
+        color: #000;
+    }
+    .mobile-menu .social-links, .contact-info {
+        display: none;
+    }
+    .mobile-menu .navigation li {
+        border-top: 1px solid rgb(220 220 220);
+    }
+    .mobile-menu .nav-logo {
+        padding: 10px 25px;
+    }
+    .mobile-menu .close-btn {
+        right: 10px;
+        top: 15px;
+    }
+    .mobile-menu .navigation:last-child {
+        border-top: transparent;
+    }
+    .mobile-menu .navigation li:last-child {
+        border-bottom: 1px solid rgb(220 220 220);
+    }
+    .banner_main {
+        padding: 50px 0px;
+    }
+    .banner_data h1 {
+        font-size: 40px;
+        margin-bottom: 5px;
+    }
+    .chooseus-block-one .inner-box {
+        padding: 30px 30px 20px 30px;
+    }
+    .about-style-two {
+        padding-bottom: 0;
+    }
+    .submit_role_home_main.download-section .content-box h2 {
+        margin-bottom: 5px;
+        font-size: 36px;
+    }
+    .footer-logo {
+        margin-bottom: 15px;
+    }
+    .main-footer .widget-section {
+        padding-bottom: 20px;
+        padding-top: 40px;
+    }
+    .footer-widget {
+        margin: 0px 0px 10px 0px !important;
+    }
+    .footer_media {
+        margin-bottom: 25px;
+    }
+
+    /* ----------------------------- home_css_end ----------------------------- */
+
+    /* ----------------------------- about_css_start ---------------------------- */
+    .about_inner_main {
+        margin-top: 40px;
+    }
+    .work_with_main.download-section .inner-container {
+        padding: 30px;
+    }
+    .list-item.mb_30 {
+        margin-bottom: 0px;
+    }
+    .team-block-one .inner-box {
+        margin-bottom: 25px;
+    }
+    /* ----------------------------- about_css_end ---------------------------- */
+
+    /* ------------------------- hiring_talent_css_start ------------------------ */
+    .contact-section .form-inner {
+        padding: 15px;
+    }
+    .submit_role_main.contact-section .form-inner {
+        padding-left: 30px;
+    }
+    /* ------------------------- hiring_talent_css_end ------------------------ */
+    /* --------------------------- apply_job_css_start -------------------------- */
+    .job_details_main {
+        padding-left: 15px;
+    }
+    /* --------------------------- apply_job_css_end -------------------------- */
+    /* ---------------------------- contact_css_start --------------------------- */
+    .contact_new_ctm.contact-section .info-box .single-item .icon-box {
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .contact_new_ctm.contact-section .info-box .single-item {
+        padding-left: 0px;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    .contact_new_ctm.contact-section .info-box {
+        height: auto;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .contact-section.contact_new_ctm .form-inner {
+        padding-right: 15px;
+    }
+    .iti-mobile .iti--container {
+        left: 20px !important;
+        right: 0 !important;
+        position: fixed !important;
+        width: 90% !important;
+    }
+    /* ---------------------------- contact_css_end --------------------------- */
+    /* ------------------------ privacy_policy_css_start ------------------------ */
+    .privacy_main {
+        margin-top: 30px;
+    }
+    /* ------------------------ privacy_policy_css_start ------------------------ */
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .sec-title h2 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .page-title h1 {}
+    .dueal-section,
+    .dueal-section .outer-container {
+        padding: 70px 0px;
+    }
+
+    .dueal-section .dots-style-one .owl-dots {
+        display: none;
+    }
+
+    .dueal-section.alternat-3 {
+        padding: 0px;
+    }
+
+    .dueal-section.service-page {
+        padding: 60px 0px 40px 0px;
+    }
+    /* ----------------------------- home_css_start ----------------------------- */
+    .banner_data h1 {
+        font-size: 25px;
+    }
+    .banner_data p {
+        font-size: 14px;
+        line-height: 25px
+    }
+    .banner_main {
+        padding: 40px 0px;
+        background-size: 100% 100%;
+    }
+    .specialist_sec {
+        padding: 0px 0px 10px 0px;
+    }
+    .sec-title h2 {
+        font-size: 29px;
+    }
+    .sec-title.pb_40 {
+        padding-bottom: 25px;
+    }
+    .specialist_sec {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    .sec-title.pb_20 {
+        padding-bottom: 10px;
+    }
+    .testimonial-block-one {
+        margin-top: 0px;
+    }
+    .testimonial-block-one .inner-box {
+        padding: 30px 20px 45px 20px;
+    }
+    .testimonial-block-one .inner-box .author-box {
+        margin-bottom: 10px;
+    }
+    .download-section .inner-container {
+        padding: 15px;
+    }
+    .submit_role_home_main {
+        padding-bottom: 0;
+    }
+    .submit_role_home_main.download-section .content-box h2 {
+        margin-bottom: 0;
+        font-size: 30px;
+    }
+    .download-section .content-box .list-item li {
+        margin-bottom: 5px;
+    }
+    .submit_role_home_main p {
+        margin-bottom: 10px;
+    }
+    .submit_role_home_main .jobs_seeker_btn {
+        margin-top: 10px;
+    }
+    .main-footer .widget-section {
+        padding-bottom: 10px;
+        padding-top: 20px;
+    }
+    .footer_ctm {
+        margin-top: 30px;
+    }
+    .pad_left50, .footer-widget {
+        padding-left: 0;
+    }
+    .main-footer .links-widget .links-list li {
+        margin-bottom: 8px;
+    }
+    .main-footer .widget-title {
+        margin-bottom: 10px;
+    }
+    /* ----------------------------- home_css_end ----------------------------- */
+
+    /* ----------------------------- about_css_start ---------------------------- */
+    .page-title {
+        padding-top: 0 !important;
+    }
+    .sub_banner {
+        margin-top: 20px;
+    }
+    .sub_banner.page-title h1 {
+        margin-bottom: 5px;
+    }
+    .recent_job_sec .chooseus-block-one .inner-box {
+        height: auto;
+    }
+    .recent_job_sec .chooseus-block-one .inner-box {
+        padding-bottom: 20px;
+    }
+    .recent_job_sec .chooseus-block-one {
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .work_with_main {
+        margin-top: 0;
+    }
+    .work_with_main.download-section .inner-container {
+        padding: 15px;
+    }
+    .team-block-one .inner-box {
+        margin-bottom: 25px !important;
+    }
+    .team-block-one .inner-box .lower-content {
+        padding-top: 5px;
+    }
+    /* ----------------------------- about_css_end ---------------------------- */
+
+    /* ------------------------- hiring_talent_css_start ------------------------ */
+    .submit_role_main .info-box {
+        padding: 15px !important;
+    }
+    .testimonial_main_talent {
+        margin-top: 0;
+    }
+    .submit_role_main {
+        padding-top: 0 !important;
+    }
+    .submit_role_main .inner-container {
+        padding: 0 !important;
+    }
+
+    .submit_role_main.contact-section .form-inner {
+        padding: 15px;
+    }
+    .contact-section {
+        padding-top: 0px !important;
+    }
+    .contact-section.submit_role_main .apply_job_form .info-box {
+        padding: 0px !important;
+    }
+    .contact-section.submit_role_main {
+        margin-top: 20px !important;
+    }
+    .submit_role_main.contact-section .apply_job_form .form-inner {
+        padding-bottom: 0px;
+    }
+
+    /* ------------------------- hiring_talent_css_end ------------------------ */
+
+    /* ---------------------------- contact_css_start --------------------------- */
+    .contact-section.contact_new_ctm .info-box {
+        padding: 15px;
+    }
+    .contact_new_ctm.contact-section .info-box .single-item p {
+        max-width: inherit;
+    }
+    .contact_new_ctm.contact-section .info-box .single-item {
+        margin-bottom: 15px;
+    }
+    .contact_new_ctm.contact-section .info-box h3 {
+        margin-bottom: 10px;
+        font-size: 26px;
+        text-align: center;
+    }
+    .contact_new_ctm.contact-section .inner-container {
+        padding: 0;
+        margin-top: 20px;
+    }
+    .contact-section.contact_new_ctm .form-inner {
+        padding-right: 10px;
+    }
+    /* ---------------------------- contact_css_end --------------------------- */
+
+    /* ------------------------ privacy_policy_css_start ------------------------ */
+    .privacy_main {
+        margin-top: 20px;
+    }
+    /* ------------------------ privacy_policy_css_start ------------------------ */
+}
+
+@media only screen and (max-width: 599px) {
+
+    .pagination li a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+}
+
+
+@media only screen and (max-width: 499px) {
+
+    .mobile-menu {
+        width: 100%;
+    }
+
+}

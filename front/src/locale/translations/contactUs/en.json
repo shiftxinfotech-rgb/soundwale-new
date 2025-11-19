@@ -1,0 +1,38 @@
+{
+  "contactUs": "Contact Us",
+  "name": "Name",
+  "namePlaceholder": "Enter Name",
+  "emailId": "Email Id",
+  "emailIdPlaceholder": "Enter Email Id",
+  "phoneNo": "Mobile Number",
+  "phoneNoPlaceholder": "Enter Mobile Number",
+  "message": "Message",
+  "messagePlaceholder": "Enter Message",
+  "validation": {
+    "email": {
+      "invalid": "Invalid email id format.",
+      "required": "Email id is required."
+    },
+    "name": {
+      "required": "Name is required."
+    },
+    "phone": {
+      "required": "Mobile number is required.",
+      "invalid": "Mobile number is invalid for {{countryName}}."
+    },
+    "message": {
+      "required": "Message is required."
+    },
+    "reason":{
+      "required":"Reason is required."
+    }
+  },
+  "submit": "Submit",
+  "deleteAccount": "Delete Account",
+  "accountDeletion": "Account Deletion",
+  "areYouSureAccountDelete": "Are You sure you want to delete ?",
+  "delete": "Delete",
+  "cancel": "Cancel",
+  "reason":"Reason",
+  "reasonPlaceholder":"Enter reason"
+}

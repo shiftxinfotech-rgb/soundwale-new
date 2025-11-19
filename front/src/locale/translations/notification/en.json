@@ -1,0 +1,10 @@
+{
+   "notification":"Notification",
+   "markAllRead":"Mark as all read",
+   "noNotificationAvailable":"No notification available.",
+   "deleteNotification":"Delete Notification",
+   "deleteNotificationContent":"Are you sure you want to delete notification?",
+   "delete":"Delete",
+   "cancel":"Cancel"
+   
+}

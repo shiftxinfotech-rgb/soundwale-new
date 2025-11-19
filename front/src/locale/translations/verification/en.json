@@ -1,0 +1,12 @@
+{
+  "enterVerificationCode": "Enter Verification Code",
+  "enterVerificationCodePlaceholder": "We are automatically detecting a SMS sent to your mobile number",
+  "authExpireIn": "OTP expires in: {{duration}} sec",
+  "notReceived": "I didn't receive code.",
+  "resendCode": "Resend code",
+  "submit": "Submit",
+  "invalidCode": "Auth code is required",
+  "shortCode": "Auth code is too short",
+  "codeExpired": "Code is expired",
+  "codeMismatch": "Auth code mismatch"
+}
