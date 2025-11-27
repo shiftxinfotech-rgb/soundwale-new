@@ -1,15 +1,3 @@
-import React, {useEffect} from 'react';
-import {Platform} from 'react-native';
-import notifee, {EventType} from '@notifee/react-native';
-import {shallowEqual, useDispatch, useSelector} from 'react-redux';
-import {
-  AppName,
-  displayPushNotification,
-  checkApplicationPermission,
-} from '@util';
-
-import App from './App';
-import {getMessaging} from '@react-native-firebase/messaging';
 import {
   setPushCount,
   setPushObject,
@@ -17,6 +5,27 @@ import {
   tokenPushed,
   unReadCount,
 } from '@features';
+import notifee, {EventType} from '@notifee/react-native';
+import {
+  getInitialNotification,
+  getMessaging,
+  getToken,
+  onMessage,
+  onNotificationOpenedApp,
+  onTokenRefresh,
+  setBackgroundMessageHandler,
+} from '@react-native-firebase/messaging';
+import {
+  AppName,
+  checkApplicationPermission,
+  displayPushNotification,
+} from '@util';
+import React, {useEffect} from 'react';
+import {Platform} from 'react-native';
+import {shallowEqual, useDispatch, useSelector} from 'react-redux';
+import App from './App';
+
+const messaging = getMessaging();
 
 const NotificationWrapper: React.FC = () => {
   const dispatch = useDispatch();
@@ -29,7 +38,7 @@ const NotificationWrapper: React.FC = () => {
       try {
         if (settings) {
           if (settings.authorizationStatus === 1) {
-            let pushToken = await getMessaging().getToken();
+            let pushToken = await getToken(messaging);
             if (pushToken) {
               if (!isPushed) {
                 dispatch(setPushToken(pushToken));
@@ -56,7 +65,7 @@ const NotificationWrapper: React.FC = () => {
         checkApplicationPermission();
       }
     }
-    const unsubscribe = getMessaging().onMessage(async remoteMessage => {
+    const unsubscribe = onMessage(messaging, async remoteMessage => {
       console.log('remoteMessage', remoteMessage);
       const notification = remoteMessage.notification;
       const title = notification?.title ?? '';
@@ -81,34 +90,32 @@ const NotificationWrapper: React.FC = () => {
       }
     });
 
-    getMessaging().setBackgroundMessageHandler(async remoteMessage => {
+    setBackgroundMessageHandler(messaging, async remoteMessage => {
       console.log('remoteMessage', remoteMessage);
       let pushCount = count + 1;
       dispatch(setPushCount(pushCount));
       await notifee.incrementBadgeCount();
     });
 
-    getMessaging().onNotificationOpenedApp(remoteMessage => {
+    onNotificationOpenedApp(messaging, remoteMessage => {
       console.log('remoteMessage', remoteMessage);
     });
 
-    getMessaging()
-      .getInitialNotification()
-      .then(async remoteMessage => {
-        if (remoteMessage) {
-          console.log('remoteMessage', remoteMessage);
-          const notification = remoteMessage.notification;
-          const data = remoteMessage.data;
-          const title = notification?.title ?? '';
-          const body = notification?.body ?? '';
-          const picture = notification?.image ?? '';
-          displayPushNotification(title, body, picture, data);
-          dispatch(setPushObject(data));
-          await notifee.incrementBadgeCount();
-        }
-      });
+    getInitialNotification(messaging).then(async remoteMessage => {
+      if (remoteMessage) {
+        console.log('remoteMessage', remoteMessage);
+        const notification = remoteMessage.notification;
+        const data = remoteMessage.data;
+        const title = notification?.title ?? '';
+        const body = notification?.body ?? '';
+        const picture = notification?.image ?? '';
+        displayPushNotification(title, body, picture, data);
+        dispatch(setPushObject(data));
+        await notifee.incrementBadgeCount();
+      }
+    });
 
-    getMessaging().onTokenRefresh(async newToken => {
+    onTokenRefresh(messaging, async (newToken: string) => {
       dispatch(setPushToken(newToken));
       console.log('remoteMessage', newToken);
     });

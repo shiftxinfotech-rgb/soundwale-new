@@ -1,12 +1,12 @@
-import {NavigationParamStack, NotificationFCMBean} from '@data';
-import {pushContent, setPushObject} from '@features';
-import {useAppDispatch, useAuthStatus} from '@hooks';
+import { NavigationParamStack, NotificationFCMBean } from '@data';
+import { pushContent, setPushObject } from '@features';
+import { useAppDispatch, useAuthStatus } from '@hooks';
 import {
   NavigationContainer,
   DefaultTheme as NavigationLightTheme,
   Theme as NavigationTheme,
 } from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {
   AddCompanyPdf,
   AddPartInfo,
@@ -47,18 +47,18 @@ import {
   useMarkIndividualReadMutation,
   usePrefetchUtility,
 } from '@services';
-import {Colors} from '@theme';
-import {navigate, navigationRef} from '@util';
-import React, {useCallback, useEffect, useState} from 'react';
-import {Platform, StatusBar} from 'react-native';
+import { Colors } from '@theme';
+import { navigate, navigationRef } from '@util';
+import React, { useCallback, useEffect, useState } from 'react';
+import { Platform, StatusBar } from 'react-native';
 import {
   MD3LightTheme as DefaultTheme,
   MD3LightTheme,
   MD3Theme,
   Provider as PaperProvider,
 } from 'react-native-paper';
-import {hideSplash} from 'react-native-splash-view';
-import {shallowEqual, useSelector} from 'react-redux';
+import { hideSplash } from 'react-native-splash-view';
+import { shallowEqual, useSelector } from 'react-redux';
 import DrawerNavigator from './DrawerNavigator';
 
 const Stack = createNativeStackNavigator<NavigationParamStack>();

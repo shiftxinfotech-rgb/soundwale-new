@@ -3,7 +3,9 @@ import {
   getAuth,
   signInAnonymously,
   signInWithCustomToken,
+  signOut,
 } from '@react-native-firebase/auth';
+import {getApp} from '@react-native-firebase/app';
 import {get, getDatabase, ref, update} from '@react-native-firebase/database';
 import {
   collection,
@@ -28,7 +30,8 @@ import {chatPath, rdbPath, userPath} from './const';
 
 const firestore = getFirestore();
 const database = getDatabase();
-const auth = getAuth();
+const firebaseApp = getApp();
+
 export class ChatHelper {
   static async createChat(
     productId: string,
@@ -183,11 +186,15 @@ export class ChatHelper {
   }
 
   static async logoutUser() {
-    await auth.signOut();
+    const auth = getAuth(firebaseApp);
+    if (auth.currentUser) {
+      await signOut(auth);
+    }
   }
 
   static async signInOrCreateUser() {
     try {
+      const auth = getAuth(firebaseApp);
       const userCredential = await signInAnonymously(auth);
       return userCredential.user!;
     } catch (error) {
@@ -198,6 +205,7 @@ export class ChatHelper {
 
   static async customLoginWithToken(token: string) {
     try {
+      const auth = getAuth(firebaseApp);
       const userCredential = await signInWithCustomToken(auth, token);
       return userCredential.user!;
     } catch (error) {

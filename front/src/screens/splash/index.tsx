@@ -1,9 +1,7 @@
 import {Images} from '@assets';
 import {Text, VectorIcon} from '@components';
-import {NavigationParamStack} from '@data';
-import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {AppStyle, Colors, CommonStyle, TS, VS} from '@theme';
-import {Scale} from '@util';
+import {navigateAndResetComplete, Scale} from '@util';
 import React, {useEffect} from 'react';
 import {useTranslation} from 'react-i18next';
 import {Image, View} from 'react-native';
@@ -12,13 +10,12 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Styles} from './Styles';
 export default function Splash() {
   const {t} = useTranslation('splash');
-  const {navigate} = useNavigation<NavigationProp<NavigationParamStack>>();
   const {top} = useSafeAreaInsets();
   useEffect(() => {
     setTimeout(() => {
-      navigate('Login');
+      navigateAndResetComplete('Login');
     }, 2000);
-  }, [navigate]);
+  }, []);
 
   return (
     <View style={[VS.flex_1]}>

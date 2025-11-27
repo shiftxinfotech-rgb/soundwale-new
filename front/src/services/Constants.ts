@@ -1,6 +1,6 @@
 import {DEV_URL, GOOGLE_MAP_API_KEY, LIVE_URL, SENTRY_URL} from '@env';
 
-const isProduction = true;
+const isProduction = false;
 
 const BASE_URL = isProduction ? LIVE_URL : DEV_URL;
 

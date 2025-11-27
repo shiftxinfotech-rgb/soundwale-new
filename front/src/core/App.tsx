@@ -1,12 +1,14 @@
 import {NoInternetConnection} from '@components';
 import {useNetworkStatus, useUserId} from '@hooks';
 import Navigator from '@navigator';
-import {getAuth} from '@react-native-firebase/auth';
+import {getApp} from '@react-native-firebase/app';
+import {getAuth, onAuthStateChanged} from '@react-native-firebase/auth';
 import {ChatHelper, ChatUnreadCountService, monitorAppState} from '@util';
 import React, {useEffect} from 'react';
 import '../locale';
 
-const auth = getAuth();
+const app = getApp();
+const auth = getAuth(app);
 
 const App = () => {
   const {isReachable} = useNetworkStatus();
@@ -18,7 +20,7 @@ const App = () => {
     } // Wait until uId is available
 
     let unsubscribe: (() => void) | null = null;
-    unsubscribe = auth.onAuthStateChanged(user => {
+    unsubscribe = onAuthStateChanged(auth, user => {
       if (user) {
         // Start listener only once
         if (!ChatUnreadCountService.isListening()) {
