@@ -569,7 +569,7 @@ public static function uploadImageWithOrientation(UploadedFile $image, string $p
 
     public static function app_token_msg($uid) {
         // Load service account JSON
-        $serviceAccount = json_decode(file_get_contents(storage_path('soundwale-ea05d-firebase-adminsdk-fbsvc-615a9915c8.json')), true);
+        $serviceAccount = json_decode(file_get_contents(storage_path('soundwale-ea05d-90ee8c62dee4.json')), true);
 
         if (!$uid) {
             http_response_code(400);
